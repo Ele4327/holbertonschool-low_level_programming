@@ -2,13 +2,15 @@
 
 int main(void)
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+
 {
-	char txtval[108];
 
-	puts(txtval, "Programming is like building a multilingual puzzle\n");
+	puts("Programming is like building a multilingual puzzle\n");
 
-	puts(txtval);	
-	
 	return (0);
-
 }
