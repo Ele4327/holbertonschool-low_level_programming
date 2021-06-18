@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main()
+
 {
 
 	int letter = 97;
@@ -12,4 +13,5 @@ int main()
 	}
 	putchar('\n');
 	return (0);
+	
 }
