@@ -14,13 +14,13 @@ int _abs(int x, int y)
 
 	if (x > 0)
 	{
-		y = (x * 1);
-		return (y);
+		r = (x * 1);
+		return (r);
 	}
 	else if (x < 0)
 	{
-		y = (x * -1);
-		return (y);
+		r = (x * -1);
+		return (r);
 	}
 	return (0);
 }
