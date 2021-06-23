@@ -9,7 +9,7 @@
  * Return: Always 0.
  */
 
-int _abs(int x, int y)
+int _abs(int r)
 {
 
 	if (r > 0)
