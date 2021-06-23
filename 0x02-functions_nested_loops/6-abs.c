@@ -22,4 +22,5 @@ int _abs(int x, int y)
 		y = (x * -1);
 		return (y);
 	}
+	return (0);
 }
