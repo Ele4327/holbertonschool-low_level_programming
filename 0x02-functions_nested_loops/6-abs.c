@@ -3,8 +3,7 @@
 /**
  * _abs - check the code for Holberton School students.
  *
- * @x: Value of the incognit.
- * @y: Value of the absolute of the incognit.
+ * @r: Value of the incognit. And then absolute of the incognit.
  *
  * Return: Always 0.
  */
