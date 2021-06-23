@@ -6,10 +6,8 @@
  * Return: Always 0.
  */
 
-int add(int)
+int add(int x, int y)
 {
-	int x;
-	int y;
 	int ttl;
 	ttl = x + y;
 	return (ttl);
