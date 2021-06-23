@@ -9,17 +9,17 @@
  * Return: Always 0.
  */
 
-int _abs(int)
+int _abs(int x, int y)
 {
 
-	if (x > 0)
+	if (r > 0)
 	{
-		r = (x * 1);
+		r = (r * 1);
 		return (r);
 	}
-	else if (x < 0)
+	else if (r < 0)
 	{
-		r = (x * -1);
+		r = (r * -1);
 		return (r);
 	}
 	return (0);
