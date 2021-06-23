@@ -9,10 +9,10 @@
  * Return: Always 0.
  */
 
-int add(int x, int y)
+int add(int x, int y, int z)
 {
-	int z;
-	z = x + y;
+
+	z = (x + y);
 
 	return (z);
 }
