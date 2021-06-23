@@ -9,10 +9,8 @@
  * Return: Always 0.
  */
 
-int _abs(int)
+int _abs(int x, int y)
 {
-
-	y = 0;
 
 	if (x > 0)
 	{
@@ -24,5 +22,4 @@ int _abs(int)
 		y = (x * -1);
 		return (y);
 	}
-	return (0);
 }
