@@ -10,12 +10,12 @@
  */
 
 /* betty style doc for function main goes there */
-int main(void)
+void positive_or_negative()
 {
 	int i;
 
 	srand(time(0));
-	i = rand() - RAND_MAX / 2;
+	i = 0;
 	if (i > 0)
 	{
 		printf("%d is positive\n", i);
@@ -28,5 +28,4 @@ int main(void)
 	{
 		printf("%d is negative\n", i);
 	}
-	return (0);
 }
