@@ -7,11 +7,10 @@
  */
 
 void print_to_98(int n);
-
 {
 	int y;
 
-	y = x;
+	y = n;
 
 	if (y < 98)
 	{
