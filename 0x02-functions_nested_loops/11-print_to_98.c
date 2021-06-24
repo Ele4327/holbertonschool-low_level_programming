@@ -2,7 +2,7 @@
 
 /**
  * print_to_98 - check the code for Holberton School students.
- *
+ * @n: Is the value of the incognit what Holberton runs to compiler.
  * Return: Always 0.
  */
 
