@@ -3,6 +3,7 @@
 
 /**
 * puts2 - tests function that prints a string every other value
+* len - longitude of the string gived
 * @str: pointer of str.
 * Return: 0
 */
@@ -24,7 +25,7 @@ void puts2(char *str)
 	int x;
 
 	x = 0;
-	while (x < 8)
+	while (x < str)
 	{
 		x++;
 		_putchar(*str);
