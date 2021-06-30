@@ -7,13 +7,24 @@
 * Return: 0
 */
 
+int len(char *str)
+{
+
+	char *ptrinit = s;
+
+	while (*str++)
+		;
+
+	return ((--s) - ptrinit);
+}
+
 void puts2(char *str)
 {
 
 	int x;
 
 	x = 0;
-	while (x < str)
+	while (x < 8)
 	{
 		x++;
 		_putchar(*str);
