@@ -19,12 +19,10 @@ void print_rev(char *s)
 		s++;
 	}
 
-	s--;
 	while (s != ptrinit)
 	{
 		_putchar(*s);
 		s--;
 	}
-	_putchar(*s);
 	_putchar('\n');
 }
