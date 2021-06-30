@@ -15,7 +15,7 @@ int len(char *str)
 	while (*str++)
 		;
 
-	return ((--s) - ptrinit);
+	return ((--str) - ptrinit);
 }
 
 void puts2(char *str)
