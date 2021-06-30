@@ -10,7 +10,7 @@
 int len(char *str)
 {
 
-	char *ptrinit = s;
+	char *ptrinit = str;
 
 	while (*str++)
 		;
