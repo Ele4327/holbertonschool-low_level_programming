@@ -22,7 +22,7 @@ void print_rev(char *s)
 	while (s != ptrinit)
 	{
 		_putchar(*s);
-		s--;
+		--s;
 	}
 	_putchar(*s);
 	_putchar('\n');
