@@ -8,6 +8,10 @@
 * Return: 0
 */
 
+/**
+* len - longitude of the string gived
+*/
+
 int len(char *str)
 {
 
@@ -25,7 +29,7 @@ void puts2(char *str)
 	int x;
 
 	x = 0;
-	while (x < *str)
+	while (x < ptrinit)
 	{
 		x++;
 		_putchar(*str);
