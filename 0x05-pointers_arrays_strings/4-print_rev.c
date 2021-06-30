@@ -9,22 +9,22 @@
 
 void print_rev(char *s)
 {
+	int x;
+	int y;
 
-	char *ptrinit;
+	y = 0;
+	x = 0;
 
-	ptrinit = s;
-
-	while (*s != '\0')
+	while (s[x] != '\0')
 	{
-		s++;
+		x++;
 	}
 
-	s--;
-	while ((s != ptrinit) && (s != NULL))
+	x--;
+	while (x >= y)
 	{
-		_putchar(*s);
-		s--;
+		_putchar(s[x]);
+		x--;
 	}
-	_putchar(*s);
 	_putchar('\n');
 }
