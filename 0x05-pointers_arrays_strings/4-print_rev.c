@@ -20,7 +20,7 @@ void print_rev(char *s)
 	}
 
 	s--;
-	while (s != ptrinit && s != '\0')
+	while ((s != ptrinit) && (s != NULL))
 	{
 		_putchar(*s);
 		s--;
