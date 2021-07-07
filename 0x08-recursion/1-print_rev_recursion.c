@@ -3,7 +3,7 @@
 #include "holberton.h"
 
 /**
- * _print_rev_recursion - function that prints a string in reverse.
+ * _puts_recursion - function that prints a string, followed by a new line.
  * @s: String base
  * Return: Always 0.
  */
@@ -23,6 +23,12 @@ void _puts_recursion(char *s)
 		}
 	}
 }
+
+/**
+ * _print_rev_recursion - function that prints a string in reverse.
+ * @s: String base
+ * Return: Always 0.
+ */
 
 void _print_rev_recursion(char *s)
 {
