@@ -14,9 +14,10 @@ int main(int argc, char *argv[])
 
     (void)argv;
 
-    for (x = 0; x <= argv; x++)
+    for (x = 0; x <= argc; x++)
     {
     }
+
     printf("%s\n", (x - 2));
 
     return (0);
