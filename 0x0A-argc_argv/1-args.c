@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     {
     }
 
-    printf("%d\n", (x - 2));
+    printf("%d\n", x - 2);
 
     return (0);
 }
