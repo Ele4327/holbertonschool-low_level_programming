@@ -10,15 +10,15 @@
 
 int main(int argc, char *argv[])
 {
-    int x;
+	int x;
 
-    (void)argv;
+	(void)argv;
 
-    for (x = 0; x <= argc; x++)
-    {
-    }
+	for (x = 0; x <= argc; x++)
+	{
+	}
 
-    printf("%d\n", x - 2);
+	printf("%d\n", x - 2);
 
-    return (0);
+	return (0);
 }
