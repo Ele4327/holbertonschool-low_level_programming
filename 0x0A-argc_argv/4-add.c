@@ -34,6 +34,7 @@ int main(int argc, char **argv)
 
 		z += atoi(argv[x]);
 	}
+
 	printf("%d\n", z);
 	return (0);
 }
