@@ -18,8 +18,8 @@ char *create_array(unsigned int size, char c)
 
 	if (x == NULL)
 	{
-		return (x);
 		printf("failed to allocate memory");
+		return (x);
 	}
 
 	return (x);
