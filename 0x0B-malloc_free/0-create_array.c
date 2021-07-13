@@ -21,6 +21,10 @@ char *create_array(unsigned int size, char c)
 		printf("failed to allocate memory");
 		return (x);
 	}
+	if (size == 0)
+	{
+		return (NULL);
+	}
 
 	return (x);
 }
