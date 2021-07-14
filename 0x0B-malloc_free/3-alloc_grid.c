@@ -32,6 +32,18 @@ void init(int **argv, int width)
 	}
 }
 
+void Free(int **argv)
+{
+
+	while (argv)
+	{
+
+		free(*argv);
+		argv++;
+	}
+	free(argv);
+}
+
 /**
  * alloc_grid - function that converse a grid of aa 2 dimensional pointer.
  * @width: Width of the array 2d
@@ -47,6 +59,11 @@ int **alloc_grid(int width, int height)
 	int **argv1;
 
 	argv = (int **)malloc(sizeof(int *) * (height + 1));
+
+	if (!argv)
+	{
+		free(argv);
+	}
 	argv[height] = NULL;
 	argv1 = argv;
 
@@ -57,7 +74,7 @@ int **alloc_grid(int width, int height)
 
 		if (*argv == NULL)
 		{
-
+			Free(argv1);
 			return (NULL);
 		}
 
