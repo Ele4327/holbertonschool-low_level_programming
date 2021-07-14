@@ -44,7 +44,9 @@ char *argstostr(int ac, char **av)
 		result++;
 
 		Buffer = (char *)malloc(sizeof(char) * result);
-		copy(Buffer, temp1, temp);
+
+		if (Buffer)
+			copy(Buffer, temp1, temp);
 
 		return Buffer;
 	}
