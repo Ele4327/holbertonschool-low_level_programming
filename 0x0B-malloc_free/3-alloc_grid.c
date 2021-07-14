@@ -6,6 +6,7 @@
  * init - function that initialize.
  * @argv: Argument Vector
  * @width: Width of the array 2d
+ * @counter: Counter of the lenght
  * Return: If size == 0 or the function fails - NULL.
  *         Otherwise - a pointer to the array.
  */
@@ -31,6 +32,14 @@ void init(int **argv, int width, int counter)
 		}
 	}
 }
+
+/**
+ * Free - function that free memories.
+ * @argv: Argument Vector
+ * @counter: Counter of the lenght
+ * Return: If size == 0 or the function fails - NULL.
+ *         Otherwise - a pointer to the array.
+ */
 
 void Free(int **argv, int counter)
 {
@@ -62,7 +71,7 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 && height <= 0)
 	{
-		return NULL;
+		return (NULL);
 	}
 
 	argv = (int **)malloc(sizeof(int *) * (height));
