@@ -34,14 +34,15 @@ void init(int **argv, int width)
 
 void Free(int **argv)
 {
+	int **temp = argv;
 
-	while (argv)
+	while (*argv)
 	{
 
 		free(*argv);
 		argv++;
 	}
-	free(argv);
+	free(temp);
 }
 
 /**
@@ -58,12 +59,19 @@ int **alloc_grid(int width, int height)
 	int **argv;
 	int **argv1;
 
+	if (width <= 0 && height <= 0)
+	{
+		return NULL;
+	}
+
 	argv = (int **)malloc(sizeof(int *) * (height + 1));
 
 	if (!argv)
 	{
 		free(argv);
+		return (NULL);
 	}
+
 	argv[height] = NULL;
 	argv1 = argv;
 
@@ -72,7 +80,7 @@ int **alloc_grid(int width, int height)
 
 		*argv = (int *)malloc(sizeof(int) * width);
 
-		if (*argv == NULL)
+		if (!*argv)
 		{
 			Free(argv1);
 			return (NULL);
