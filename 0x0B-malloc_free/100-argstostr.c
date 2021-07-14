@@ -1,6 +1,6 @@
-#include "holberton.h"
 #include <stdlib.h>
 #include <string.h>
+#include "holberton.h"
 
 /**
  * argstostr - Concatenates all the arguments of your program.
@@ -8,6 +8,22 @@
  * @av: Size of Array of counters
  * Return: Always 0.
  */
+
+void copy(char *Buffer, char **av, int ac)
+{
+
+	while (ac--)
+	{
+
+		while (**av != '\0')
+		{
+			*Buffer++ = *((*av)++);
+		}
+		*Buffer++ = '\n';
+		av++;
+	}
+	*Buffer = '\0';
+}
 
 char *argstostr(int ac, char **av)
 {
@@ -28,12 +44,12 @@ char *argstostr(int ac, char **av)
 		result++;
 
 		Buffer = (char *)malloc(sizeof(char) * result);
-		ac = temp;
+		copy(Buffer, temp1, temp);
 
-		return (Buffer);
+		return Buffer;
 	}
 	else
 	{
-		return (NULL);
+		return NULL;
 	}
 }
