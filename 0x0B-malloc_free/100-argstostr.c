@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * strtow - splits strings to words
