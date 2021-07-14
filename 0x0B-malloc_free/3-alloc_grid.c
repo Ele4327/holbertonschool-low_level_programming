@@ -10,12 +10,12 @@
  *         Otherwise - a pointer to the array.
  */
 
-void init(int **argv, int width)
+void init(int **argv, int width, int counter)
 {
 
 	int copywidth = 0;
 
-	while (*argv)
+	while (counter--)
 	{
 
 		if (copywidth < width)
@@ -32,11 +32,11 @@ void init(int **argv, int width)
 	}
 }
 
-void Free(int **argv)
+void Free(int **argv, int counter)
 {
 	int **temp = argv;
 
-	while (*argv)
+	while (counter--)
 	{
 
 		free(*argv);
@@ -58,38 +58,36 @@ int **alloc_grid(int width, int height)
 
 	int **argv;
 	int **argv1;
+	int counter = 0;
 
 	if (width <= 0 && height <= 0)
 	{
 		return NULL;
 	}
 
-	argv = (int **)malloc(sizeof(int *) * (height + 1));
-
+	argv = (int **)malloc(sizeof(int *) * (height));
+	argv1 = argv;
 	if (!argv)
 	{
 		free(argv);
 		return (NULL);
 	}
 
-	argv[height] = NULL;
-	argv1 = argv;
-
-	for (; height; --height)
+	for (; counter < height; counter++)
 	{
 
 		*argv = (int *)malloc(sizeof(int) * width);
 
 		if (!*argv)
 		{
-			Free(argv1);
+			Free(argv1, counter);
 			return (NULL);
 		}
 
 		argv++;
 	}
 
-	init(argv1, width);
+	init(argv1, width, height);
 
 	return (argv1);
 }
