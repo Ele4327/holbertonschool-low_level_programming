@@ -30,7 +30,6 @@ int *array_range(int min, int max)
 	}
 
 	z = 0;
-
 	while (min <= max)
 	{
 		z++;
