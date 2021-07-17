@@ -48,9 +48,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (strConcat != NULL)
 	{
 		memset(strConcat, '\0', (stringLen));
-
 		memcpy(strConcat, s1, sizeStr1);
-
 		memcpy((strConcat + sizeStr1), s2, sizeStr2);
 	}
 
