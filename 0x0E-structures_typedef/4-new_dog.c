@@ -42,6 +42,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ptrmmry = malloc(sizeof(dog_t));
 	if (ptrmmry == NULL)
 	{
+		free(ptrmmry);
 		return (NULL);
 	}
 	else
