@@ -3,7 +3,7 @@
 #include "dog.h"
 
 /**
- * free_dog: Free the dogs!
+ * free_dog - Free the dogs!
  * @d: Variable of data type
  * Return: Always 0
  */
