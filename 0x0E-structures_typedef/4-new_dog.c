@@ -22,7 +22,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 }
 
 /**
- * new_dog - Initialize a new dog
+ * new_dog - Copy of a new dog
  * @name: Member name of the dog
  * @age: Member age of the dog
  * @owner: Member owner of the dog
@@ -33,6 +33,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 
 	dog_t *ptrmmry;
+
+	if (name == NULL || owner == NULL)
+	{
+		return (NULL);
+	}
 
 	ptrmmry = malloc(sizeof(dog_t));
 	if (ptrmmry == NULL)
