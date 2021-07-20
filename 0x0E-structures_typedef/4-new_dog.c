@@ -47,7 +47,7 @@ int init_dog(struct dog *d, char *name, float age, char *owner)
 		}
 
 		flldt(owner, d->owner);
-		(d->owner)[x1git] = '\0';
+		(d->owner)[x] = '\0';
 	}
 
 	d->age = age;
