@@ -1,75 +1,122 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "dog.h"
 
+int lenpntr(char *data);
+void flldt(char *data_src, char *data_dest);
+
 /**
- * _strcopy - copy a string.
- * @dest: string of destine.
- * @src: string initial.
- * Return: dest pointer.
+ * init_dog - Initialize function dog from dog.h
+ * @d: Name of the structure
+ * @name: Member name of the dog
+ * @age: Member age of the dog
+ * @owner: Member owner of the dog
+ * Return: Value of initialice dog
  */
 
-char *_strcopy(char *dest, char *src)
+int init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	int x = 0;
 
-	for (x = 0; src[x] != '\0'; x++)
+	if (name)
 	{
-		dest[x] = src[x];
+		int x;
+
+		x = lenpntr(name);
+		d->name = malloc(sizeof(char) * x);
+
+		if (d->name == NULL)
+		{
+			return (0);
+		}
+
+		flldt(name, d->name);
+		(d->name)[x] = '\0';
 	}
 
-	dest[x] = '\0';
+	if (owner)
+	{
+		int x;
 
-	return (dest);
+		x = lenpntr(owner);
+		d->owner = malloc(sizeof(char) * x);
+
+		if (d->owner == NULL)
+		{
+			free(d->name);
+			return (0);
+		}
+
+		flldt(owner, d->owner);
+		(d->owner)[x] = '\0';
+	}
+
+	d->age = age;
+	return (1);
 }
 
 /**
- * new_dog - creates a new dog.
- * @name: Member name of the new dog.
- * @age: Member age of the new dog.
- * @owner: Member pwner of the new dog.
- * Return: ptr pointer to memory.
+ * new_dog - Copy of a new dog
+ * @name: Member name of the dog
+ * @age: Member age of the dog
+ * @owner: Member owner of the dog
+ * Return: A new dog, type of data
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int mmryname = 0, mmryowner = 0;
-	dog_t *ptr;
 
-	while (name[mmryname] != '\0')
-	{
-		mmryname++;
-	}
-	while (owner[mmryowner] != '\0')
-	{
-		mmryowner++;
-	}
-	if (name == NULL || age < 0 || owner == NULL)
-	{
-		return (NULL);
-	}
-	ptr = malloc(sizeof(dog_t));
-	if (ptr == NULL)
-	{
-		return (NULL);
-	}
-	ptr->name = malloc(sizeof(char) * (mmryname + 1));
-	if (ptr->name == NULL)
-	{
-		free(ptr);
-		return (NULL);
-	}
-	ptr->owner = malloc(sizeof(char) * (mmryowner + 1));
-	if (ptr->owner == NULL)
-	{
-		free(ptr->name);
-		free(ptr);
+	dog_t *ptrmmry;
 
+	ptrmmry = malloc(sizeof(dog_t));
+	if (ptrmmry == NULL)
+	{
 		return (NULL);
 	}
-	ptr->name = _strcopy(ptr->name, name);
-	ptr->age = age;
-	ptr->owner = _strcopy(ptr->owner, owner);
+	else
+	{
+		int status;
 
-	return (ptr);
+		status = init_dog(ptrmmry, name, age, owner);
+
+		if (status == 0)
+		{
+			free(ptrmmry);
+			ptrmmry = NULL;
+		}
+
+		return (ptrmmry);
+	}
+}
+
+/**
+ * lenpntr - Lenght of a member of the structure
+ * @data: Member of the dog
+ * Return: Lenght of a member data
+ */
+
+int lenpntr(char *data)
+{
+	int cntdr = 0;
+
+	while (*data != '\0')
+	{
+		cntdr++;
+		data++;
+	}
+	return (cntdr);
+}
+
+/**
+ * flldt - Lenght of a member of the structure
+ * @data_src: Data Source
+ * @data_dest: Data Destiny
+ * Return: Always 0
+ */
+
+void flldt(char *data_src, char *data_dest)
+{
+	while (*data_src != '\0')
+	{
+		*data_dest++ = *data_src++;
+	}
 }
