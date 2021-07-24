@@ -17,7 +17,7 @@ void print_all(const char *const format, ...)
 	va_list list;
 
 	va_start(list, format);
-	while (*fmt)
+	while (fmt && *fmt)
 	{
 		switch (*fmt)
 		{
