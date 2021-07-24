@@ -74,7 +74,7 @@ void print_s(va_list list_arg)
 
 	if (str == NULL)
 	{
-		printf("(nil)");
+		printf("(nill)");
 	}
 	else
 	{
