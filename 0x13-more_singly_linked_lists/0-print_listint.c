@@ -8,10 +8,8 @@
 
 size_t print_listint(const listint_t *h)
 {
-	size_t x;
-	/* x is size of all elements */
-
 	size_t x = 0;
+	/* x is size of all elements */
 
 	while (h != NULL)
 	{
