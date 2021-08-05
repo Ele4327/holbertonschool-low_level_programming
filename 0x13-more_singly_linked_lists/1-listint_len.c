@@ -3,7 +3,7 @@
 /**
  * listint_len - returns the number of elements in a linked list
  * @h: pointer
- * Return - Data type size_t
+ * Return: Data type size_t
  */
 
 size_t listint_len(const listint_t *h)

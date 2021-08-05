@@ -4,7 +4,7 @@
  * add_nodeint - returns the number of elements in a linked list
  * @head: double pointer
  * @n: constant
- * Return - Data type linstint_t
+ * Return: Data type linstint_t
  */
 
 listint_t *add_nodeint(listint_t **head, const int n)
