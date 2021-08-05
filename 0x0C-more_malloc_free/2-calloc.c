@@ -14,22 +14,23 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int x = 0;
+	unsigned int x;
 	char *z;
+
+	z = malloc(nmemb * size);
+	x = 0;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
 
-	z = malloc(nmemb * size);
-
 	if (z == 0)
 	{
 		return (NULL);
 	}
 
-	while (x < (nmemb * size))
+	for (; x < (nmemb * size); x++)
 	{
 		z[x] = 0;
 		x++;

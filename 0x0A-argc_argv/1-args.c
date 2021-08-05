@@ -8,6 +8,13 @@
  * Return: Always 0.
  */
 
+int main(int argc, __attribute__((unused) char **argv)
+{
+	printf("%d\n", argc - 1);
+	return (0);
+}
+
+/**
 int main(int argc, char *argv[])
 {
 	int x;
@@ -22,3 +29,4 @@ int main(int argc, char *argv[])
 
 	return (0);
 }
+*/

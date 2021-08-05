@@ -8,7 +8,7 @@
  * Return: Always 0.
  */
 
-int print_last_digit(int x)
+int main(int x)
 
 {
 	x = x % 10;
@@ -18,7 +18,7 @@ int print_last_digit(int x)
 		x = (x * -1);
 	}
 
-	_putchar(x + 48);
+	putchar(x + 48);
 
 	return (x);
 }
