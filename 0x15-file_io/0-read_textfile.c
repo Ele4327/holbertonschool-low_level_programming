@@ -20,6 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename || !bffr || x_byte == -1 || fd == -1)
 	{
+		free(bffr);
 		return (0);
 	}
 
