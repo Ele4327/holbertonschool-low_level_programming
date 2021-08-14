@@ -10,24 +10,24 @@
 int create_file(const char *filename, char *text_content)
 {
 
-    int x, z, lenght = 0;
+	int x, z, lenght = 0;
 
-    if (filename == NULL)
-        return (-1);
+	if (filename == NULL)
+		return (-1);
 
-    if (text_content != NULL)
-    {
-        for (lenght = 0; text_content[lenght];)
-            lenght++;
-    }
+	if (text_content != NULL)
+	{
+		for (lenght = 0; text_content[lenght];)
+			lenght++;
+	}
 
-    x = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-    z = write(x, text_content, lenght);
+	x = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	z = write(x, text_content, lenght);
 
-    if (x == -1 || z == -1)
-        return (-1);
+	if (x == -1 || z == -1)
+		return (-1);
 
-    close(x);
+	close(x);
 
-    return (1);
+	return (1);
 }
