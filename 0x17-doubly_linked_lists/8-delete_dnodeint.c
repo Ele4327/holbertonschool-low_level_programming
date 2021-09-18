@@ -9,6 +9,7 @@
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
     dlistint_t *x = *head;
+    unsigned int z = 0;
 
     if (x == NULL)
     {
@@ -47,5 +48,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
     }
 
     free(x);
+
     return (1);
 }
