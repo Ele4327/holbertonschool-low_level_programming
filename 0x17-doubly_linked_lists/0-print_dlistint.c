@@ -8,6 +8,7 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
+<<<<<<< HEAD
 	if (h)
 	{
 		int x;
@@ -21,3 +22,17 @@ size_t print_dlistint(const dlistint_t *h)
 	}
 	return (0);
 }
+=======
+    if (h)
+    {
+        size_t x;
+        for (x = 0; h != NULL; x++)
+        {
+            printf("%d\n", h->n);
+            h = h->next;
+        }
+        return (x);
+    }
+    return (0);
+}
+>>>>>>> 37b534ed39cb253abedd6916761e2ba12c291698
